@@ -86,7 +86,7 @@ export const Bvh: ForwardRefComponent<BvhProps, Group> = /* @__PURE__ */ React.f
 
     const raycaster = useThree((state) => state.raycaster)
     React.useImperativeHandle(fref, () => ref.current, [])
-
+    console.log('Bvh Re-render')
     React.useEffect(() => {
       if (enabled) {
         const options = { strategy, verbose, setBoundingBox, maxDepth, maxLeafTris, indirect }
